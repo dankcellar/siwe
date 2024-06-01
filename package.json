@@ -5,6 +5,21 @@
   "main": "dist/main.js",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": {
+      "includeNodeModules": [
+        "apg-js",
+        "buffer"
+      ]
+    },
+    "module": {
+      "includeNodeModules": [
+        "apg-js",
+        "buffer"
+      ]
+    }
+  },
   "workspaces": [
     "packages/siwe-parser",
     "packages/siwe"
@@ -15,7 +30,7 @@
     "lint": "lerna run lint",
     "docs": "typedoc --plugin nlfurniss-typedoc-plugin-sourcefile-url --plugin typedoc-plugin-extras --sourcefile-url-prefix 'https://github.com/spruceid/siwe' --favicon ./favicon.svg --out docs packages/siwe/lib/siwe.ts",
     "publish": "lerna run build && lerna publish",
-    "deploy": "parcel build"
+    "deploy": "parcel build --no-cache"
   },
   "author": "Spruce Systems Inc.",
   "license": "Apache-2.0",

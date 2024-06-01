@@ -22,6 +22,9 @@ import {
   checkInvalidKeys,
   isValidISO8601Date,
 } from './utils';
+export {
+  generateNonce as generateNonce
+};
 
 export class SiweMessage {
   /**RFC 3986 URI scheme for the authority that is requesting the signing. */
