@@ -1,6 +1,6 @@
 {
   "name": "siwe-cloudflare",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "source": "packages/siwe/lib/client.ts",
   "main": "dist/main.js",
@@ -26,7 +26,8 @@
     "packages/siwe"
   ],
   "scripts": {
-    "build": "parcel build --no-cache"
+    "build": "parcel build",
+    "publish": "parcel build && npm publish"
   },
   "author": "Spruce Systems Inc.",
   "license": "Apache-2.0",
